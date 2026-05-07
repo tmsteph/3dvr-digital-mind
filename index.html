@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Mind by 3dvr.tech</title>
+  <style>
+    :root {
+      --bg: #080b10;
+      --panel: #121824;
+      --panel-soft: #182131;
+      --text: #f4f0df;
+      --muted: #b8b1a0;
+      --gold: #f5c76b;
+      --blue: #6fb7ff;
+      --green: #8ee6a8;
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(111,183,255,.18), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(245,199,107,.14), transparent 32%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--gold); text-decoration: none; }
+
+    header, section, footer {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      min-height: 92vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 4rem 0;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: .45rem .85rem;
+      border: 1px solid rgba(245,199,107,.35);
+      border-radius: 999px;
+      color: var(--gold);
+      background: rgba(245,199,107,.08);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 10vw, 7rem);
+      line-height: .95;
+      margin: 0 0 1rem;
+      letter-spacing: -0.06em;
+    }
+
+    .subtitle {
+      font-size: clamp(1.15rem, 3vw, 1.7rem);
+      max-width: 760px;
+      margin: 0 auto 2rem;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      padding: .95rem 1.3rem;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #15110a;
+      font-weight: 700;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,.2);
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--panel), var(--panel-soft));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--gold);
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .flow {
+      display: grid;
+      gap: .8rem;
+      margin-top: 2rem;
+      max-width: 760px;
+    }
+
+    .flow div {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 1rem;
+    }
+
+    .quote {
+      font-size: clamp(1.5rem, 4vw, 2.6rem);
+      color: var(--gold);
+      line-height: 1.15;
+      max-width: 900px;
+    }
+
+    footer {
+      padding: 4rem 0 2rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <div class="badge">Digital Mind by 3dvr.tech</div>
+      <h1>Your mind, extended.</h1>
+      <p class="subtitle">
+        An open-source ambient computing system for memory, projects, agents,
+        relationships, health, and daily life.
+      </p>
+      <div class="actions">
+        <a class="button" href="#vision">Explore the vision</a>
+        <a class="button secondary" href="https://3dvr.tech">Back to 3dvr.tech</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="vision">
+    <h2>A calmer way to compute.</h2>
+    <p class="section-intro">
+      Digital Mind is not another app to distract you. It is a personal operating layer
+      designed to reduce mental load, remember what matters, and help you act with clarity.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Memory</h3>
+        <p>Store notes, events, conversations, relationships, ideas, and lessons as living context.</p>
+      </div>
+
+      <div class="card">
+        <h3>Agents</h3>
+        <p>Small AI helpers that research, draft, organize, summarize, and prepare work for approval.</p>
+      </div>
+
+      <div class="card">
+        <h3>Approval</h3>
+        <p>Nothing important happens blindly. Your agents prepare the work. You stay in control.</p>
+      </div>
+
+      <div class="card">
+        <h3>Ambient Life</h3>
+        <p>Briefings, reminders, focus support, and gentle guidance so you can spend less time staring at screens.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The first version.</h2>
+    <p class="section-intro">
+      Start simple. Build the system for one person first. Then make it useful for creators,
+      entrepreneurs, families, teams, and communities.
+    </p>
+
+    <div class="flow">
+      <div>1. Daily briefing</div>
+      <div>2. Notes and memory</div>
+      <div>3. Tasks and priorities</div>
+      <div>4. Contacts and relationships</div>
+      <div>5. Outreach and project agents</div>
+      <div>6. Human approval queue</div>
+    </div>
+  </section>
+
+  <section>
+    <p class="quote">
+      “Digital Mind is a personal, open-source intelligence layer that helps humans remember,
+      decide, create, and live more freely.”
+    </p>
+  </section>
+
+  <section>
+    <h2>Open-source by design.</h2>
+    <p class="section-intro">
+      Digital Mind should be local-first, privacy-respecting, portable, and repairable.
+      It can begin as a PWA, grow into a local agent system, and eventually become part of
+      TommyOS and the larger 3dvr.tech ecosystem.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>PWA</h3>
+        <p>Works on phone, tablet, desktop, and eventually wearable systems.</p>
+      </div>
+
+      <div class="card">
+        <h3>Local-first</h3>
+        <p>Use local storage, local models, Termux, Linux, and optional cloud sync.</p>
+      </div>
+
+      <div class="card">
+        <h3>Human-first</h3>
+        <p>Dark mode, low stimulation, gentle design, and tools that support the nervous system.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Digital Mind by <a href="https://3dvr.tech">3dvr.tech</a></p>
+    <p>Do Good and Have Fun.</p>
+  </footer>
+</body>
+</html>
